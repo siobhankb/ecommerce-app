@@ -1,5 +1,6 @@
 from app import app
-from flask import render_template#, redirect, url_for, flash
+from app.forms import NewShopperForm
+from flask import render_template, redirect, url_for, flash
 
 @app.route('/index')
 def index():
@@ -8,7 +9,9 @@ def index():
 
 @app.route('/signup')
 def signup():
-    return render_template('signup.html')
+    form = NewShopperForm()
+
+    return render_template('signup.html', form=form)
 
 @app.route('/login')
 def login():
