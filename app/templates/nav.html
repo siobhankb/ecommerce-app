@@ -2,7 +2,7 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Commie Commerce</a>
+    <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Commie Commerce</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ url_for('login') }}">Login</a>
@@ -15,9 +15,5 @@
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ url_for('view_cart') }}">View Cart</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#" tabindex="-1"
-      >Another Link</a>
   </li>
 </ul>

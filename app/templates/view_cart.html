@@ -6,4 +6,19 @@
 
 <h3>This is the 'view_cart' page</h3>
 
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for item in items %}
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">{{ item.quantity }} @ {{ item.price }} ==> ${{ item.total }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
 {% endblock %}

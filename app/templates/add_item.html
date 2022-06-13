@@ -6,4 +6,23 @@
 
 <h3>This is the 'add-item' page</h3>
 
+    <form method='post'>
+        {{form.csrf_token}}
+        <div>
+
+            {{ form.name.label }}
+            {{ form.name(class='form-control', placeholder='ex: apple') }}
+
+            {{ form.price.label }}
+            {{ form.price(class='form-control', placeholder='ex: 1.29') }}
+
+            {{ form.quantity.label }}
+            {{ form.quantity(class='form-control', placeholder='ex: 2') }}
+
+            {{ form.submit(class='btn btn-success mt-3')}}
+
+        </div>
+
+    </form>
+
 {% endblock %}
