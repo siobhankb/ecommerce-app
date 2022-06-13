@@ -6,4 +6,20 @@
 
 <h3>This is the 'login' page</h3>
 
+<form method='post'>
+        {{form.csrf_token}}
+        <div>
+
+            {{ form.username.label }}
+            {{ form.username(class='form-control', placeholder='Enter a user name') }}
+
+            {{ form.password.label }}
+            {{ form.password(class='form-control', placeholder='Choose a password') }}
+
+            {{ form.submit(class='btn btn-primary mt-3')}}
+
+        </div>
+
+    </form>
+
 {% endblock %}

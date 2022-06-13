@@ -1,5 +1,5 @@
 from app import app
-from app.forms import NewShopperForm
+from app.forms import NewShopperForm, LoginForm
 from flask import render_template, redirect, url_for, flash
 
 @app.route('/index')
@@ -15,7 +15,9 @@ def signup():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    form = LoginForm()
+
+    return render_template('login.html', form=form)
 
 @app.route('/view-cart')
 def view_cart():

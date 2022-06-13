@@ -9,3 +9,4 @@ def load_user(user_id):
 
 class ClassName(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
+    
