@@ -4,7 +4,7 @@ from flask_login import login_user, login_required, logout_user, current_user
 from app.models import Shopper, Cart
 from flask import render_template, redirect, url_for, flash
 
-@app.route('/index')
+@app.route('/')
 def index():
     hi = 'hello you'
     return render_template('index.html', hi=hi)
